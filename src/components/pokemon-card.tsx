@@ -18,7 +18,7 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon,borderColor = '#009688'}
     }
 
     const hideColor = () => {
-        setColor('#f5f5f5');
+        setColor('#f5f5f5'); // we make a grey border-color as default
     }
 
     return (
