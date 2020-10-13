@@ -21,6 +21,11 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon,borderColor = '#009688'}
         setColor('#f5f5f5'); // we make a grey border-color as default
     }
 
+
+    const formatedDate = (date: Date): string => {
+      return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`
+    }
+
     return (
     <div className="col s6 m4" onMouseEnter={showBorder} onMouseLeave={hideColor}>
       <div className="card horizontal" style={{borderColor: color}}>
@@ -30,6 +35,7 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon,borderColor = '#009688'}
         <div className="card-stacked">
           <div className="card-content">
             <p>{pokemon.name}</p>
+            <p><small>{formatedDate}</small></p>
             <p><small>{pokemon.created.toString()}</small></p>
           </div>
         </div>
