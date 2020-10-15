@@ -73,8 +73,7 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const isFormValid = validateForm();
-    history.push(`/pokemons/${pokemon.id}`);
-    
+
     if(isFormValid) {
       history.push(`/pokemons/${pokemon.id}`)
     }
@@ -146,16 +145,32 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
                 <div className="form-group">
                   <label htmlFor="name">Nom</label>
                   <input id="name" name= "name" type="text" className="form-control" value={form.name.value} onChange={e => handleInputChange(e)}></input>
+                  {form.name.error && 
+                       <div className="card-panel red accent-1">
+                         {form.name.error}
+                      </div>
+                 }
                 </div>
                 {/* Pokemon hp */}
                 <div className="form-group">
                   <label htmlFor="hp">Point de vie</label>
                   <input id="hp" name="hp" type="number" className="form-control" value={form.hp.value} onChange={e => handleInputChange(e)}></input>
+                 {form.hp.error && 
+                       <div className="card-panel red accent-1">
+                         {form.hp.error}
+                      </div>
+                 }
+                  
                 </div>
                 {/* Pokemon cp */}
                 <div className="form-group">
                   <label htmlFor="cp">Dégâts</label>
                   <input id="cp" name="cp" type="number" className="form-control" value={form.cp.value} onChange={e => handleInputChange(e)}></input>
+                  {form.cp.error && 
+                       <div className="card-panel red accent-1">
+                         {form.cp.error}
+                      </div>
+                 }
                 </div>
                 {/* Pokemon types */}
                 <div className="form-group">
