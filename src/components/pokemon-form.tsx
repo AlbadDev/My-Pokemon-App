@@ -72,12 +72,64 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(form);
+    const isFormValid = validateForm();
     history.push(`/pokemons/${pokemon.id}`);
+    
+    if(isFormValid) {
+      history.push(`/pokemons/${pokemon.id}`)
+    }
   }
 
 
+  const validateForm = () => {
+    let newForm: Form = form;
+    
+    // Validator name
+    if(!/^[a-zA-Zàéè ]{3,25}$/.test(form.name.value)) {
+      const errorMsg: string = 'Le nom du pokémon est requis (1-25).';
+      const newField: Field = { value: form.name.value, error: errorMsg, isValid: false };
+      newForm = { ...newForm, ...{ name: newField } };
+    } else {
+      const newField: Field = { value: form.name.value, error: '', isValid: true };
+      newForm = { ...newForm, ...{ name: newField } };
+    }
 
+    // Validator hp
+    if(!/^[0-9]{1,3}$/.test(form.hp.value)) {
+      const errorMsg: string = 'Les points de vie du pokémon sont compris entre 0 et 999.';
+      const newField: Field = {value: form.hp.value, error: errorMsg, isValid: false};
+      newForm = { ...newForm, ...{ hp: newField } };
+    } else {
+      const newField: Field = { value: form.hp.value, error: '', isValid: true };
+      newForm = { ...newForm, ...{ hp: newField } };
+    }
+
+    // Validator cp
+    if(!/^[0-9]{1,2}$/.test(form.cp.value)) {
+      const errorMsg: string = 'Les dégâts du pokémon sont compris entre 0 et 99';
+      const newField: Field = {value: form.cp.value, error: errorMsg, isValid: false};
+      newForm = { ...newForm, ...{ cp: newField } };
+    } else {
+      const newField: Field = { value: form.cp.value, error: '', isValid: true };
+      newForm = { ...newForm, ...{ cp: newField } };
+    }
+
+    setForm(newForm);
+    return newForm.name.isValid && newForm.hp.isValid && newForm.cp.isValid;
+  }
+
+  const isTypesValid = (type: string): boolean => {
+
+    if (form.types.value.length === 1 && hasType(type)) {
+      return false;
+    }
+
+    if(form.types.value.length >= 3 && !hasType(type)) {
+      return false;
+    }
+
+    return true;
+  }
 
 
   return (
@@ -111,7 +163,7 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
                   {types.map(type => (
                     <div key={type} style={{marginBottom: '10px'}}>
                       <label>
-                        <input id={type} type="checkbox" className="filled-in" value={type} checked={hasType(type)} onChange={e => selectType(type, e)}></input>
+                        <input id={type} type="checkbox" className="filled-in" value={type} disabled={!isTypesValid(type)} checked={hasType(type)} onChange={e => selectType(type, e)}></input>
                         <span>
                           <p className={formatType(type)}>{ type }</p>
                         </span>
