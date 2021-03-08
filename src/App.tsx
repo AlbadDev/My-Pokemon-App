@@ -4,6 +4,7 @@ import PokemonsDetail from './pages/pokemon-detail';
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import PageNotFound from './pages/page-not-found';
 import PokemonEdit from './pages/pokemon-edit';
+import About from './components/About';
 
 
 
@@ -14,6 +15,7 @@ const App: FunctionComponent = () => {
     return (
      <Router>
          <div>
+         <About/>
             {/* navigator bar of all our Application */}
             <nav>
                 <div className="nav-wrapper teal">
