@@ -18,7 +18,7 @@ const App: FunctionComponent = () => {
             {/* navigator bar of all our Application */}
             <nav>
                 <div className="nav-wrapper teal">
-                <Link to="/" className="brand-logo center">Pokedex</Link>
+                    <Link to="/" className="brand-logo center">Pokedex</Link>
                 </div>
             </nav>
             {/* Gestionary System of for all our App router */}

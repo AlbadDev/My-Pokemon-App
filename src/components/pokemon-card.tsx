@@ -15,12 +15,13 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon,borderColor = '#009688'}
 
     const [color,setColor] = useState<string>();
     const history = useHistory();
+    
     const showBorder = () => {
         setColor(borderColor);
     }
 
     const hideColor = () => {
-        setColor('#f5f5f5'); // we make a grey border-color as default
+        setColor('#f5f5f5'); 
     }
 
     const gotoPokemon = (id: number) => {
@@ -30,7 +31,7 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon,borderColor = '#009688'}
 
 
     return (
-    <div className="col s6 m4" onClick={() => gotoPokemon(pokemon.id)} onMouseEnter={showBorder} onMouseLeave={hideColor}>
+    <div className="col s12 m4" onClick={() => gotoPokemon(pokemon.id)} onMouseEnter={showBorder} onMouseLeave={hideColor}>
       <div className="card horizontal" style={{borderColor: color}}>
         <div className="card-image"> 
           <img src={pokemon.picture} alt={pokemon.name}/>
