@@ -10,8 +10,6 @@ import PokemonEdit from './pages/pokemon-edit';
 
 
 const App: FunctionComponent = () => {
-    
-   
     return (
      <Router>
          <div>
@@ -33,8 +31,6 @@ const App: FunctionComponent = () => {
      </Router>
     )
 }
-
-
 export default App;
 
 
