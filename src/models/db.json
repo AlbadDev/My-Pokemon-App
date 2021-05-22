@@ -61,7 +61,8 @@
       "cp": 6,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/019.png",
       "types": [
-        "Normal"
+        "Normal",
+        "Combat"
       ]
     },
     {

@@ -3,7 +3,7 @@ import { RouteComponentProps, Link } from 'react-router-dom';
 import Pokemon from '../models/pokemon';
 import formatDate from '../helpers/format-date';
 import formatType from '../helpers/format-type';
-import { parseCommandLine } from 'typescript';
+// import { parseCommandLine } from 'typescript';
 import PokemonService from '../services/pokemon-services';
   
 type Params = { id: string };
