@@ -3,7 +3,9 @@ import { RouteComponentProps } from 'react-router-dom';
 import PokemonForm from '../components/pokemon-form';
 import Pokemon from '../models/pokemon';
 import PokemonService from '../services/pokemon-services';
- 
+import Loader from '../components/loadding';
+
+
 type Params = { id: string };
   
 const PokemonEdit: FunctionComponent<RouteComponentProps<Params>> = ({ match }) => {
@@ -22,7 +24,7 @@ const PokemonEdit: FunctionComponent<RouteComponentProps<Params>> = ({ match }) 
             <PokemonForm pokemon={pokemon} isEditForm={true}></PokemonForm>
         </div>
       ) : (
-        <h4 className="center">Aucun pokémon à afficher !</h4>
+       <h4 style={{textAlign:'center'}}><Loader /> </h4>
       )}
     </div>
   );

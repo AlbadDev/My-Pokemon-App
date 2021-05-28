@@ -5,7 +5,10 @@ import formatDate from '../helpers/format-date';
 import formatType from '../helpers/format-type';
 // import { parseCommandLine } from 'typescript';
 import PokemonService from '../services/pokemon-services';
-  
+import Loader from '../components/loadding';
+
+
+
 type Params = { id: string };
   
 const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match }) => {
@@ -67,7 +70,7 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
           </div>
         </div>
       ) : (
-        <h4 className="center">Aucun pokémon à afficher !</h4>
+        <h4 style={{textAlign:'center'}}><Loader/></h4>
       )}
     </div>
   );
