@@ -6,7 +6,8 @@ import PokemonService from '../services/pokemon-services';
 
   
 type Props = {
-  pokemon: Pokemon
+  pokemon: Pokemon,
+  isEditForm: boolean
 };
 
 type Field = {
@@ -17,6 +18,7 @@ type Field = {
 }
 
 type Form = {
+  picture: Field,
   name: Field,
   hp: Field,
   cp: Field,
@@ -24,9 +26,10 @@ type Form = {
 }
 
 
-const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
+const PokemonForm: FunctionComponent<Props> = ({pokemon,isEditForm}) => {
   
   const [form, setForm] = useState<Form>({
+    picture: {value: pokemon.picture},
     name: { value: pokemon.name, isValid: true},
     hp: {value: pokemon.hp, isValid: true},
     cp: {value: pokemon.cp, isValid: true},
@@ -84,10 +87,29 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
     }
   }
 
+  const isAddForm = () => {
+    return !isEditForm;
+  }
 
   const validateForm = () => {
     let newForm: Form = form;
     
+    // Validate the Url
+    if(isAddForm()) {
+      const start = 'http://assets.pokemon.com/assets/cms2/img/detail';
+      const end = '.png';
+
+      if(!form.picture.value.startWith(start) || !form.picture.value.endWith(end)) {
+        const errorMsg: string = 'url image not valid';
+        const newField: Field = { value: form.picture.value, error: errorMsg, isValid: false };
+        newForm = {...form, ...{picture: newField} };
+      }else {
+        const newField = { value: form.picture.value, error: '', isValid: true };
+        newForm = {...form,...{picture: newField} }; 
+      }
+    }
+
+
     // Validator name
     if(!/^[a-zA-Zàéè ]{3,25}$/.test(form.name.value)) {
       const errorMsg: string = 'Le nom du pokémon est requis (1-25).';
@@ -143,13 +165,16 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
     <form onSubmit={e => handleSubmit(e)}>
       <div className="row">
         <div className="col s12 m8 offset-m2">
-          <div className="card hoverable"> 
-            <div className="card-image">
-              <img src={pokemon.picture} alt={pokemon.name} style={{width: '250px', margin: '0 auto'}}/>
-              <span className='btn-floating halfway-fab waves-effect waves-light' >
-                <i onClick={deletePokemon} className='material-icons'>delete</i>
-              </span>
-            </div>
+          <div className="card hoverable">
+             { isEditForm && (
+               <div className="card-image">
+                  <img src={pokemon.picture} alt={pokemon.name} style={{width: '250px', margin: '0 auto'}}/>
+                  <span className='btn-floating halfway-fab waves-effect waves-light' >
+                    <i onClick={deletePokemon} className='material-icons'>delete</i>
+                  </span>
+                </div>
+             )}
+            
             <div className="card-stacked">
               <div className="card-content">
                 {/* Pokemon name */}
