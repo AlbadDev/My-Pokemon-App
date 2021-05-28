@@ -116,6 +116,39 @@
       "types": [
         "Feu"
       ]
+    },
+    {
+      "id": 1622175806336,
+      "hp": 100,
+      "cp": 10,
+      "name": "Luna",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/185.png",
+      "types": [
+        "Plante",
+        "Combat"
+      ]
+    },
+    {
+      "id": 1622176011268,
+      "hp": "250",
+      "cp": "98",
+      "name": "Albad",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/190.png",
+      "types": [
+        "Combat",
+        "Vol"
+      ]
+    },
+    {
+      "id": 1622177080270,
+      "hp": 100,
+      "cp": "99",
+      "name": "Alkaline",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/160.png",
+      "types": [
+        "Combat",
+        "Fée"
+      ]
     }
   ]
 }

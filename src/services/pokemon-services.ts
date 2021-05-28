@@ -1,5 +1,7 @@
 import Pokemon from '../models/pokemon';
  
+// services for our app
+
 export default class PokemonService {
   // Fetch pokemons from from the json-server
   static getPokemons(): Promise<Pokemon[]> {
@@ -40,7 +42,7 @@ export default class PokemonService {
 
   // add a pokemon 
   static addPokemon(pokemon: Pokemon): Promise<Pokemon> {
-  //  delete pokemon.created;
+   delete pokemon.created;
 
    return fetch('http://localhost:3001/pokemons', {
     method: 'POST',
