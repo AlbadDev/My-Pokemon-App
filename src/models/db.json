@@ -114,7 +114,8 @@
       "cp": 8,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/037.png",
       "types": [
-        "Feu"
+        "Feu",
+        "Normal"
       ]
     },
     {
@@ -148,6 +149,18 @@
       "types": [
         "Combat",
         "Fée"
+      ]
+    },
+    {
+      "id": 1622177917897,
+      "hp": 100,
+      "cp": "15",
+      "name": "Elenata",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/200.png",
+      "types": [
+        "Normal",
+        "Fée",
+        "Vol"
       ]
     }
   ]

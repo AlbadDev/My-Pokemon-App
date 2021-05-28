@@ -53,6 +53,15 @@ export default class PokemonService {
    .catch(error => this.handleError(error));
   }
 
+  // searche a pokemon
+  static searchPokemon(term: string): Promise<Pokemon[]> {
+    return fetch(`http://localhost:3001/pokemons?q=${term}`)
+    .then(response => response.json())
+    .catch(error => this.handleError(error));
+  }
+
+
+
   // handle empty data 
   static isEmpty(data: Object): boolean {
     return Object.keys(data).length === 0;

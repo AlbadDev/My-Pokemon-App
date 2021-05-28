@@ -3,6 +3,7 @@ import Pokemon from '../models/pokemon';
 import PokemonCard from '../components/pokemon-card';
 import PokemonService from '../services/pokemon-services'  ;
 import {Link} from 'react-router-dom';
+import PokemonSearch from '../components/PokemonSearch';
 
 const PokemonList: FunctionComponent = () => {
 
@@ -16,7 +17,8 @@ const PokemonList: FunctionComponent = () => {
     <div>
       <h1 className="center">Pokédex</h1>
       <div className="container"> 
-        <div className="row"> 
+        <div className="row">
+          <PokemonSearch /> 
           {pokemons.map(pokemon => (
             <PokemonCard key={pokemon.id} pokemon={pokemon} />
           ))}

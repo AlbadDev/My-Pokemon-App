@@ -14,7 +14,7 @@ export default class Pokemon {
      hp: number = 100,
      cp: number = 10,
      name: string = 'Pokemon Name ...',
-     picture: string = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{...}.png',
+     picture: string = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/xxx.png',
      types: Array<string> = ['Normal'],
      created: Date = new Date()
     ) {
