@@ -143,17 +143,6 @@
       ]
     },
     {
-      "id": 1622177080270,
-      "hp": 100,
-      "cp": "99",
-      "name": "Alkaline",
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/160.png",
-      "types": [
-        "Combat",
-        "Fée"
-      ]
-    },
-    {
       "id": 1622177917897,
       "hp": 100,
       "cp": "20",
