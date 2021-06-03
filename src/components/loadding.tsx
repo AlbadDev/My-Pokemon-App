@@ -14,6 +14,10 @@ const Loader: FunctionComponent = () => {
           <div className="circle"></div> 
         </div>
       </div> 
+      <div>
+      </div>
+
+
    </div> 
   );
 }

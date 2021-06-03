@@ -137,7 +137,8 @@
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/190.png",
       "types": [
         "Combat",
-        "Vol"
+        "Vol",
+        "Electrik"
       ]
     },
     {
@@ -159,6 +160,18 @@
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/200.png",
       "types": [
         "Fée",
+        "Vol"
+      ]
+    },
+    {
+      "id": 1622437723825,
+      "hp": 100,
+      "cp": 10,
+      "name": "Skobar",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/144.png",
+      "types": [
+        "Combat",
+        "Psy",
         "Vol"
       ]
     }
