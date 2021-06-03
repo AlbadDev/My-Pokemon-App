@@ -9,6 +9,7 @@ import PokemonAdd from './pages/pokemon-add';
 
 
 
+
 const App: FunctionComponent = () => {
     return (
      <Router>
@@ -17,7 +18,7 @@ const App: FunctionComponent = () => {
             <nav>
                 <div className="nav-wrapper teal">
                     <Link to="/" className="brand-logo center">Pokedex</Link>
-                </div>
+                </div>   
             </nav>
             {/* Gestionary System of for all our App router */}
             <Switch>

@@ -8,7 +8,8 @@
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
       "types": [
         "Plante",
-        "Poison"
+        "Poison",
+        "Fée"
       ]
     },
     {
@@ -155,7 +156,7 @@
     {
       "id": 1622177917897,
       "hp": 100,
-      "cp": "15",
+      "cp": "20",
       "name": "Elenata",
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/200.png",
       "types": [
