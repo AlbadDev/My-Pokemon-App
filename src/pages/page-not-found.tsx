@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
-  
+
 const PageNotFound: FunctionComponent = () => {
-  
+
   return (
     <div className="center">
       <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png" alt="Page non trouvée"/>
@@ -13,5 +13,5 @@ const PageNotFound: FunctionComponent = () => {
     </div>
   );
 }
-  
+
 export default PageNotFound;

@@ -8,8 +8,7 @@
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
       "types": [
         "Plante",
-        "Poison",
-        "Fée"
+        "Poison"
       ]
     },
     {
@@ -19,8 +18,7 @@
       "cp": 6,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
       "types": [
-        "Feu",
-        "Insecte"
+        "Feu"
       ]
     },
     {
@@ -62,8 +60,7 @@
       "cp": 6,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/019.png",
       "types": [
-        "Normal",
-        "Combat"
+        "Normal"
       ]
     },
     {
@@ -104,8 +101,17 @@
       "cp": 3,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/027.png",
       "types": [
-        "Normal",
-        "Combat"
+        "Normal"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Mélofée",
+      "hp": 25,
+      "cp": 5,
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png",
+      "types": [
+        "Fée"
       ]
     },
     {
@@ -115,54 +121,28 @@
       "cp": 8,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/037.png",
       "types": [
-        "Feu",
-        "Normal"
+        "Feu"
       ]
     },
     {
-      "id": 1622175806336,
-      "hp": 100,
+      "id": 1625118537273,
+      "hp": "101",
       "cp": 10,
-      "name": "Luna",
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/185.png",
+      "name": "Albad",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/444.png",
       "types": [
-        "Plante",
+        "Normal",
         "Combat"
       ]
     },
     {
-      "id": 1622176011268,
-      "hp": "250",
-      "cp": "98",
-      "name": "Albad",
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/190.png",
-      "types": [
-        "Combat",
-        "Vol",
-        "Electrik"
-      ]
-    },
-    {
-      "id": 1622177917897,
-      "hp": 100,
-      "cp": "20",
-      "name": "Elenata",
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/200.png",
-      "types": [
-        "Fée",
-        "Vol"
-      ]
-    },
-    {
-      "id": 1622437723825,
+      "id": 1625123381473,
       "hp": 100,
       "cp": 10,
-      "name": "Skobar",
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/144.png",
+      "name": "Samba",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/145.png",
       "types": [
-        "Combat",
-        "Psy",
-        "Vol"
+        "Normal"
       ]
     }
   ]
