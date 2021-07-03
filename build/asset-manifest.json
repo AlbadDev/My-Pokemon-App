@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Alka4495/Pokemon-App/static/css/main.35186935.chunk.css",
-    "main.js": "/Alka4495/Pokemon-App/static/js/main.db6e3fb8.chunk.js",
-    "main.js.map": "/Alka4495/Pokemon-App/static/js/main.db6e3fb8.chunk.js.map",
+    "main.js": "/Alka4495/Pokemon-App/static/js/main.25b06529.chunk.js",
+    "main.js.map": "/Alka4495/Pokemon-App/static/js/main.25b06529.chunk.js.map",
     "runtime-main.js": "/Alka4495/Pokemon-App/static/js/runtime-main.24adccdc.js",
     "runtime-main.js.map": "/Alka4495/Pokemon-App/static/js/runtime-main.24adccdc.js.map",
     "static/js/2.29f2043f.chunk.js": "/Alka4495/Pokemon-App/static/js/2.29f2043f.chunk.js",
     "static/js/2.29f2043f.chunk.js.map": "/Alka4495/Pokemon-App/static/js/2.29f2043f.chunk.js.map",
     "index.html": "/Alka4495/Pokemon-App/index.html",
-    "precache-manifest.2369566a628a14ad1c1fdfda75ae31e2.js": "/Alka4495/Pokemon-App/precache-manifest.2369566a628a14ad1c1fdfda75ae31e2.js",
+    "precache-manifest.beda7de9c1cdc804a684f79a80cdf1d0.js": "/Alka4495/Pokemon-App/precache-manifest.beda7de9c1cdc804a684f79a80cdf1d0.js",
     "service-worker.js": "/Alka4495/Pokemon-App/service-worker.js",
     "static/css/main.35186935.chunk.css.map": "/Alka4495/Pokemon-App/static/css/main.35186935.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.24adccdc.js",
     "static/js/2.29f2043f.chunk.js",
     "static/css/main.35186935.chunk.css",
-    "static/js/main.db6e3fb8.chunk.js"
+    "static/js/main.25b06529.chunk.js"
   ]
 }
